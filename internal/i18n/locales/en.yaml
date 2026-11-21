@@ -7,8 +7,6 @@
 # FOR DEVELOPMENT:
 # - err.* follow the error codes from internal/lead; form.error.* are general errors.
 #   Compare with the approved wording in the current file.
-# - form.success is split into {title, text}: index.html must output
-#   form.success.text (the template needs a small update).
 
 meta:
   title: "Vetlog — veterinary information system"
@@ -135,12 +133,12 @@ err:
   server: "We could not send your request. Please try again later."
   name:
     required: "Please enter your name."
-    length: "The name is too long."
+    length: "The name must be from 2 to 100 characters."
   phone:
     invalid: "Please check the phone number."
   clinic:
     required: "Please enter the clinic name."
-    length: "The clinic name is too long."
+    length: "The clinic name must be from 2 to 200 characters."
   email:
     invalid: "Please check the email address."
   consent:
@@ -150,7 +148,7 @@ faq:
   title: "Frequently asked questions"
   1:
     q: "What can I try right now?"
-    a: "For now it is a prototype. The CRM is in progress, and the other modules are in development. We are looking for the first clinics for a pilot."
+    a: "For now it is a prototype. The CRM is already in progress, and the other modules are in development. We are looking for the first clinics for a pilot."
   2:
     q: "Can pet owners book appointments online?"
     a: "No. There is no booking for pet owners yet: the appointment scheduling module is in development and is not available on this site."
@@ -173,4 +171,4 @@ footer:
 
 privacy:
   title: "Privacy policy"
-  body: "1. What data we collect. Through the request form we receive your name, phone number, clinic name and, if you provide it, your email. You give us this information yourself. 2. Why. To reply to your request and discuss the terms of a pilot. We do not use the data for other purposes. 3. Where and how it is stored. Requests are stored in a database and forwarded to the team's work inbox. 4. Your rights. You can ask us to show, correct or delete your data by writing to us. 5. Contacts. The address for questions about personal data will be published here."
+  body: "1. What data we collect. Through the request form we receive your name, phone number, clinic name and, if you provide it, your email. You give us this information yourself. When you send a request, we also store your browser's IP address and User-Agent. 2. Why. To reply to your request, discuss the terms of a pilot and record your consent to data processing. We do not use the data for other purposes. 3. Where and how it is stored. Requests and consent records are stored in a database and forwarded to the team's work inbox. 4. Your rights. You can ask us to show, correct or delete your data by writing to us. 5. Contacts. A contact for questions about personal data will be added before the site goes live."
