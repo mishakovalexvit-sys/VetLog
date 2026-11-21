@@ -1,0 +1,176 @@
+# English locale for the Vetlog landing page. Keys match ru.yaml one to one.
+#
+# FOR THE LAWYER: privacy.*, form.consent.* and footer.privacy are a draft.
+# They need legal review before publication. This text is not legal advice
+# and does not replace an approved privacy policy.
+#
+# FOR DEVELOPMENT:
+# - err.* follow the error codes from internal/lead; form.error.* are general errors.
+#   Compare with the approved wording in the current file.
+# - form.success is split into {title, text}: index.html must output
+#   form.success.text (the template needs a small update).
+
+meta:
+  title: "Vetlog — veterinary information system"
+  description: "A prototype veterinary information system. We are looking for the first clinics for a pilot."
+
+a11y:
+  skip: "Skip to content"
+
+brand:
+  name: "Vetlog"
+
+nav:
+  label: "Main navigation"
+  problem: "Problem"
+  solution: "How it works"
+  modules: "Modules"
+  price: "Pricing"
+  faq: "FAQ"
+
+lang:
+  label: "Site language"
+
+hero:
+  status: "Prototype in development, looking for the first clinics for a pilot"
+  title: "Clinic paperwork, without the extra routine"
+  subtitle: "Vetlog is a veterinary information system: animal records, appointment scheduling, a basic CRM and voice-based record keeping. It is currently a prototype."
+  cta: "Leave a request"
+
+problem:
+  title: "What clinics deal with"
+  1:
+    title: "Manual entry"
+    text: "Writing up records by hand takes time that a doctor could spend with patients."
+  2:
+    title: "Scattered data"
+    text: "Animal and owner data is spread across different systems and is hard to find when it is needed."
+  3:
+    title: "Routine"
+    text: "Paperwork after a visit takes time that could go to patients."
+
+solution:
+  title: "How it is meant to work"
+  lead: "The doctor dictates the visit notes, the system recognises the speech, and the doctor checks and confirms the text. Only then does the record go into the animal's file. The voice module is still in development."
+  1:
+    title: "Dictation"
+    text: "The doctor dictates the details of the visit."
+  2:
+    title: "Recognition"
+    text: "The system turns speech into text."
+  3:
+    title: "Visit notes"
+    text: "The text is arranged as a draft record."
+  4:
+    title: "Doctor's review"
+    text: "The doctor reads the draft, corrects it and confirms it."
+  5:
+    title: "Animal record"
+    text: "The confirmed entry goes into the animal's record."
+
+modules:
+  title: "Modules"
+  lead: "The CRM is already in progress. The other modules are in development."
+  cards:
+    title: "Animal records"
+    text: "A record for each animal, with its details and visit history."
+  crm:
+    title: "Basic CRM"
+    text: "Owners, their animals and contact history in one place."
+  booking:
+    title: "Appointment scheduling"
+    text: "A visit schedule within the clinic."
+  voice:
+    title: "Voice record keeping"
+    text: "Dictation of a visit, speech recognition and a draft record for the doctor to review."
+
+status:
+  dev: "in development"
+  ready: "in progress"
+  title: "Status"
+  text: "Prototype in development, looking for the first clinics for a pilot"
+  cta: "Leave a request"
+
+audience:
+  title: "Who it's for"
+  clinics:
+    title: "Clinics"
+    text: "Clinics with several doctors that need one shared animal record and tidy paperwork."
+  centers:
+    title: "Veterinary centres"
+    text: "Centres with several specialists and a steady flow of visits."
+  private:
+    title: "Private practices"
+    text: "Independent vets who want less routine paperwork."
+
+price:
+  title: "Pricing"
+  main: "Pilot: terms to be discussed, pricing on request"
+  text: "We agree on the final terms with each clinic separately."
+  cta: "Leave a request"
+
+form:
+  title: "Leave a request"
+  intro: "Tell us about your clinic and we will get back to you to talk about a pilot."
+  name: "Name"
+  phone: "Phone"
+  clinic: "Clinic name"
+  email: "Email"
+  optional: "(optional)"
+  consent:
+    before: "I agree to the processing of my personal data as described in the "
+    link: "privacy policy"
+    after: "."
+  submit: "Send request"
+  success:
+    title: "Request received"
+    text: "Thank you, your request has been received. We will be in touch."
+
+form.error:
+  generic: "Something went wrong. Please check your details and try again."
+  csrf: "Your session has expired. Reload the page and send the request again."
+  rate_limit: "Too many attempts. Please wait a minute and try again."
+
+err:
+  server: "We could not send your request. Please try again later."
+  name:
+    required: "Please enter your name."
+    length: "The name is too long."
+  phone:
+    invalid: "Please check the phone number."
+  clinic:
+    required: "Please enter the clinic name."
+    length: "The clinic name is too long."
+  email:
+    invalid: "Please check the email address."
+  consent:
+    required: "Please confirm your consent to data processing."
+
+faq:
+  title: "Frequently asked questions"
+  1:
+    q: "What can I try right now?"
+    a: "For now it is a prototype. The CRM is in progress, and the other modules are in development. We are looking for the first clinics for a pilot."
+  2:
+    q: "Can pet owners book appointments online?"
+    a: "No. There is no booking for pet owners yet: the appointment scheduling module is in development and is not available on this site."
+  3:
+    q: "How much does it cost?"
+    a: "Pilot: terms to be discussed, pricing on request."
+  4:
+    q: "What happens to my request?"
+    a: "It is saved on our side and sent to the team's inbox. We will contact you using the details you provided."
+  5:
+    q: "How do I join the pilot?"
+    a: "Leave a request on this site. We will get in touch and discuss the terms."
+
+footer:
+  about: "A veterinary information system at the prototype stage."
+  nav: "Site navigation"
+  privacy: "Privacy policy"
+  contact: "You can reach us through the request form."
+  copy: "© Vetlog"
+
+privacy:
+  title: "Privacy policy"
+  body: "1. What data we collect. Through the request form we receive your name, phone number, clinic name and, if you provide it, your email. You give us this information yourself. 2. Why. To reply to your request and discuss the terms of a pilot. We do not use the data for other purposes. 3. Where and how it is stored. Requests are stored in a database and forwarded to the team's work inbox. 4. Your rights. You can ask us to show, correct or delete your data by writing to us. 5. Contacts. The address for questions about personal data will be published here."

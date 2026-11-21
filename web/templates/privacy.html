@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="{{.Lang}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{if .PolicyReady}}<title>{{.T "privacy.title"}} — {{.T "brand.name"}}</title>{{else}}<title>{{if eq .Lang "en"}}Privacy policy{{else}}Политика конфиденциальности{{end}} — {{.T "brand.name"}}</title>{{end}}
+  <link rel="canonical" href="{{.Canonical}}">
+  {{range .Alternates}}<link rel="alternate" hreflang="{{.Lang}}" href="{{.Href}}">
+  {{end}}<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="{{.Home}}">{{.T "brand.name"}}</a>
+  </div>
+</header>
+
+<main id="main" class="section">
+  <div class="container" style="max-width: var(--measure)">
+    {{if .PolicyReady}}
+    <h1>{{.T "privacy.title"}}</h1>
+    <div class="policy-text">{{.T "privacy.body"}}</div>
+    {{else}}
+    <h1>{{if eq .Lang "en"}}Privacy policy{{else}}Политика конфиденциальности{{end}}</h1>
+    <p class="section-lead">{{if eq .Lang "en"}}The privacy policy text is being prepared.{{else}}Текст политики конфиденциальности находится в подготовке.{{end}}</p>
+    {{end}}
+    <p><a href="{{.Home}}">{{if eq .Lang "en"}}Back to home{{else}}Вернуться на главную{{end}}</a></p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>{{.T "footer.copy"}}</p>
+  </div>
+</footer>
+
+</body>
+</html>
