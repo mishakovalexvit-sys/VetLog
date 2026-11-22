@@ -22,7 +22,7 @@ func csrfToken(w http.ResponseWriter, r *http.Request, secure bool) string {
 		panic(err) // crypto/rand недоступен: продолжать небезопасно
 	}
 	token := base64.RawURLEncoding.EncodeToString(b)
-	http.SetCookie(w, &http.Cookie{
+	http.SetCookie(w, &http.Cookie{//nolint:gosec // управляется COOKIE_SECURE: true в проде, false только для локального HTTP
 		Name:     csrfCookie,
 		Value:    token,
 		Path:     "/",
