@@ -234,7 +234,7 @@ func Healthz(ping func(context.Context) error) http.HandlerFunc {
 			http.Error(w, "db unavailable", http.StatusServiceUnavailable)
 			return
 		}
-		fmt.Fprint(w, "ok")
+		_, _ = fmt.Fprint(w, "ok")
 	}
 }
 

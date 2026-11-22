@@ -79,7 +79,7 @@ func do(t *testing.T, h http.Handler, method, path string, form url.Values, toke
 		req.Header.Set("Content-Type", "application/x-www-form-urlencoded")
 	}
 	if token != "" {
-		req.AddCookie(&http.Cookie{Name: csrfCookie, Value: token})
+		req.AddCookie(&http.Cookie{Name: csrfCookie, Value: token})//nolint:gosec // тестовая cookie
 	}
 	rec := httptest.NewRecorder()
 	h.ServeHTTP(rec, req)
